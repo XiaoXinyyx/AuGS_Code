@@ -203,7 +203,7 @@ if __name__ == '__main__':
 
     parser.add_argument("--skip_training_3dgs", action="store_true", help="Skip training 3DGS")
     parser.add_argument("--skip_training_2d", action="store_true", help="Skip training 2D")
-    parser.add_argument("--skip_projecting_2d", action="store_true", help="Skip projecting to 2D")
+    parser.add_argument("--skip_projecting_2d", action="store_true", help="Skip projecting to world")
     parser.add_argument("--skip_refining_3d", action="store_true", help="Skip refining 3DGS")
     parser.add_argument("--skip_metrics", action="store_true", help="Skip rendering and metrics")
 
