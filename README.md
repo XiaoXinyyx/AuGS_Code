@@ -33,6 +33,16 @@ pip install ./submodules/gsplat --no-build-isolation
 pip install ./submodules/wpca
 ```
 
+## Results reproduction
+
+To reproduce our results in the paper, run
+```shell
+python benchmark.py --mcmc
+-m360 [path to mipnerf360 dataset]
+-ns [path to nerfsynthetic dataset]
+-tnt [path to tanks and temples dataset]
+-db [path to deepblending dataset]
+```
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
