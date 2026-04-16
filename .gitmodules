@@ -1,0 +1,9 @@
+[submodule "submodules/simple-knn"]
+	path = submodules/simple-knn
+	url = https://gitlab.inria.fr/bkerbl/simple-knn.git
+[submodule "submodules/wpca"]
+	path = submodules/wpca
+	url = git@github.com:XiaoXinyyx/wpca.git
+[submodule "diff-gaussian-2d-rasterization/third_party/glm"]
+	path = diff-gaussian-2d-rasterization/third_party/glm
+	url = https://github.com/g-truc/glm.git
