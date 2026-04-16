@@ -7,3 +7,6 @@
 [submodule "diff-gaussian-2d-rasterization/third_party/glm"]
 	path = diff-gaussian-2d-rasterization/third_party/glm
 	url = https://github.com/g-truc/glm.git
+[submodule "submodules/fused-ssim"]
+	path = submodules/fused-ssim
+	url = git@github.com:rahul-goel/fused-ssim.git
