@@ -22,12 +22,6 @@ def compute_opacity(opacity, opa_dir, theta, beta, camera_center, means3D):
     view_dir = camera_center[None, ...] - means3D[-aug_vertex_count:]
     view_dir = F.normalize(view_dir, dim=-1)
     odv = torch.sum(opa_dir * view_dir, dim=-1) # [aug_vertex_count, ]
-    
-    # cos_theta = torch.cos(theta)         # [aug_vertex_count, ]
-    # omx = (odv - cos_theta) / (1.0 - cos_theta) # [aug_vertex_count, ]
-    # valid_mask = omx >= 0.0001
-    # opa_atten = torch.zeros(aug_vertex_count, device=means3D.device, dtype=means3D.dtype)
-    # opa_atten[valid_mask] = torch.pow(omx[valid_mask], torch.exp(beta[valid_mask]))
 
     alpha = torch.acos(odv.clip(-0.9999, 0.9999)) # Safe acos
     base = 0.5 * (torch.cos(torch.clip(alpha / theta, 0, torch.pi)) + 1)
