@@ -6,7 +6,32 @@ Yixin Yang, Bojian Wu, Yang Zhou, Hui Huang
 
 ![Teaser image](assets/teaser.png)
 
+## Installation
 
+Create virtual environment.
+```shell
+conda create -n AuGS python=3.9
+conda activate AuGS
+```
+
+Install pytorch.
+```shell
+pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118
+```
+
+Install dependencies.
+```shell
+pip install -r requirements.txt
+```
+
+Install submodules
+```shell
+pip install ./diff-gaussian-2d-rasterization --no-build-isolation
+pip install ./submodules/simple-knn --no-build-isolation
+pip install ./submodules/fused-ssim --no-build-isolation
+pip install ./submodules/gsplat --no-build-isolation
+pip install ./submodules/wpca
+```
 
 
 <section class="section" id="BibTeX">
