@@ -37,11 +37,11 @@ pip install ./submodules/wpca
 
 To reproduce our results in the paper, run
 ```shell
-python benchmark.py --mcmc
--m360 [path to mipnerf360 dataset]
--ns [path to nerfsynthetic dataset]
--tnt [path to tanks and temples dataset]
--db [path to deepblending dataset]
+python benchmark.py --mcmc \
+    -m360 [path to mipnerf360 dataset] \
+    -ns [path to nerfsynthetic dataset] \
+    -tnt [path to tanks and temples dataset] \
+    -db [path to deepblending dataset]
 ```
 
 **Parameters:**
@@ -97,7 +97,7 @@ After Stage 1 completes, train and project 2D refinement kernels to 3D space:
 ```shell
 python train_2d.py \
     -m output/your_scene \
-    --ratio 0.1 \
+    --ratio 0.1
 ```
 
 **Key parameters:**
@@ -127,7 +127,7 @@ python refine.py \
     --rotation_lr 0.0005 \
     --opadir_lr 0.001 \
     --theta_lr 0.0002 \
-    --beta_lr 0.002 \
+    --beta_lr 0.002
 ```
 
 ### 4. Rendering and Evaluation
