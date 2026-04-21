@@ -120,7 +120,7 @@ def main(args):
                 f"-m {output_path}",
                 f"--seed {args.seed}",
                 f"--ratio {ratio}",
-                "--skip_train" if args.skip_training_2d else " "
+                "--skip_train_2d" if args.skip_training_2d else " "
             ]))
             logging[sn]["train_2d"] = elpased_time
 
